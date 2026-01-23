@@ -5,6 +5,5 @@ title = 'My New Hugo Site'
 theme ="hugo-book"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true  # 允许 HTML

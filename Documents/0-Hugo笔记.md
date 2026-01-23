@@ -1,3 +1,8 @@
+---
+title: "页面标题"
+
+---
+
 ## 介绍
 
 Hugo是一款用Go语言编写的高性能静态网站生成器，以其极致的构建速度和简洁的设计理念而广受欢迎
@@ -103,14 +108,15 @@ layouts/
 ## Shortcodes
 
 Shortcodes 是在 Markdown 内容中使用的自定义标签，用于插入复杂的 HTML 结构或功能，有多种使用方式：
-```
-{{< hello >}}
 
-{{< button text="查看详情" url="/about" >}}
+``` go-html-template
+{{< shortcode-name >}}
 
-{{< alert type="warning" >}}
+{{< shortcode-name text="查看详情" url="/about" >}}
+
+{{< shortcode-name type="warning" >}}
 这是一个警告信息。
-{{< /alert >}}
+{{< /shortcode-name >}}
 ```
 
 ## Partials使用
