@@ -1,4 +1,4 @@
-baseURL = 'https://oballon.github.io/'
+baseURL = 'https://oballon.github.io/Knowledge-Shore/'
 # relativeURLs = true
 languageCode = 'en-us'
 title = 'My New Hugo Site'
