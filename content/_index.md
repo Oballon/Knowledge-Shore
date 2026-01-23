@@ -45,7 +45,7 @@ layout: landing
 - {{< card >}}
   ### Shortcodes
   Pretty good shortcodes are included to enhance markup files:
-  [Columns](/docs/shortcodes/columns.md),
+  [Columns]({{< relref "/docs/shortcodes/columns" >}}),
   [Cards](/Knowledge-Shore/docs/shortcodes/experimental/cards/),
   [Tabs](/Knowledge-Shore/docs/shortcodes/tabs/),
   [Images](/Knowledge-Shore/docs/shortcodes/experimental/images/),
