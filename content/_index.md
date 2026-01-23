@@ -45,13 +45,13 @@ layout: landing
 - {{< card >}}
   ### Shortcodes
   Pretty good shortcodes are included to enhance markup files:
-  [Columns](/docs/shortcodes/columns/),
-  [Cards](/docs/shortcodes/experimental/cards/),
-  [Tabs](/docs/shortcodes/tabs/),
-  [Images](/docs/shortcodes/experimental/images/),
-  [Asciinema](/docs/shortcodes/experimental/asciinema/),
-  [KaTex](/docs/shortcodes/katex/),
-  [Mermaid](/docs/shortcodes/mermaid/) and others.
+  [Columns](/Knowledge-Shore/docs/shortcodes/columns),
+  [Cards](/Knowledge-Shore/docs/shortcodes/experimental/cards/),
+  [Tabs](/Knowledge-Shore/docs/shortcodes/tabs/),
+  [Images](/Knowledge-Shore/docs/shortcodes/experimental/images/),
+  [Asciinema](/Knowledge-Shore/docs/shortcodes/experimental/asciinema/),
+  [KaTex](/Knowledge-Shore/docs/shortcodes/katex/),
+  [Mermaid](/Knowledge-Shore/docs/shortcodes/mermaid/) and others.
   {{< /card >}}
 
 - {{< card >}}
