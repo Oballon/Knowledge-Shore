@@ -1,7 +1,12 @@
+# 以下一行用于部署到GitHub Pages
 baseURL = 'https://oballon.github.io/'
+
+# 以下两行用于本地测试
+# baseURL = '/'    
 # relativeURLs = true
+
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Knowledge Shore'
 theme ="hugo-book"
 
 [markup]

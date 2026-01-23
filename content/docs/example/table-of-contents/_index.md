@@ -1,6 +1,7 @@
 ---
 bookCollapseSection: true
 weight: 10
+bookhidden: true
 ---
 
 # Ubi loqui

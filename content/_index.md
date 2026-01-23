@@ -46,12 +46,12 @@ layout: landing
   ### Shortcodes
   Pretty good shortcodes are included to enhance markup files:
   [Columns]({{< relref "/docs/shortcodes/columns" >}}),
-  [Cards](/Knowledge-Shore/docs/shortcodes/experimental/cards/),
-  [Tabs](/Knowledge-Shore/docs/shortcodes/tabs/),
-  [Images](/Knowledge-Shore/docs/shortcodes/experimental/images/),
-  [Asciinema](/Knowledge-Shore/docs/shortcodes/experimental/asciinema/),
-  [KaTex](/Knowledge-Shore/docs/shortcodes/katex/),
-  [Mermaid](/Knowledge-Shore/docs/shortcodes/mermaid/) and others.
+  [Cards]({{< relref "/docs/shortcodes/experimental/cards" >}}),
+  [Tabs]({{< relref "/docs/shortcodes/tabs" >}}),
+  [Images]({{< relref "/docs/shortcodes/experimental/images" >}}),
+  [Asciinema]({{< relref "/docs/shortcodes/experimental/asciinema" >}}),
+  [KaTex]({{< relref "/docs/shortcodes/katex" >}}),
+  [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}}) and others.
   {{< /card >}}
 
 - {{< card >}}
