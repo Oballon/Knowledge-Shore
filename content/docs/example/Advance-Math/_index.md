@@ -1,3 +1,4 @@
 ---
-# bookCollapseSection: true
+title: "Advance Math"
+bookCollapseSection: true
 ---

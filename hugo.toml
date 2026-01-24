@@ -1,13 +1,18 @@
 # 以下一行用于部署到GitHub Pages
-baseURL = 'https://oballon.github.io/'
+# baseURL = 'https://oballon.github.io/'
 
 # 以下两行用于本地测试
-# baseURL = '/'    
-# relativeURLs = true
+baseURL = '/'    
+relativeURLs = true
 
-languageCode = 'en-us'
 title = 'Knowledge Shore'
+
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+
 theme ="hugo-book"
+
+disablePathToLower = false
 
 [markup]
   [markup.goldmark.renderer]

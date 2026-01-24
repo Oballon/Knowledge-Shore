@@ -1,4 +1,5 @@
 ---
+title: "Section"
 bookCollapseSection: true
 bookHidden: true
 ---

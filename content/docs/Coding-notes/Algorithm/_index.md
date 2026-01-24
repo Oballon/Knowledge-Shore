@@ -1,3 +1,4 @@
 ---
+title: "Algorithm"
 bookCollapseSection: true
 ---

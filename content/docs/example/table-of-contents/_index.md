@@ -1,4 +1,5 @@
 ---
+title: "Table of Contents"
 bookCollapseSection: true
 weight: 10
 bookhidden: true
