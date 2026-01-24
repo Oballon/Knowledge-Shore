@@ -1,9 +1,9 @@
 # 以下一行用于部署到GitHub Pages
-# baseURL = 'https://oballon.github.io/'
+baseURL = 'https://oballon.github.io/'
 
 # 以下两行用于本地测试
-baseURL = '/'    
-relativeURLs = true
+# baseURL = '/'    
+# relativeURLs = true
 
 title = 'Knowledge Shore'
 
@@ -17,3 +17,16 @@ disablePathToLower = false
 [markup]
   [markup.goldmark.renderer]
     unsafe = true  # 允许 HTML
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['$$', '$$'], ['\\[', '\\]']]
+      inline = [['$', '$'], ['\\(', '\\)']]
+
+# config.toml
+[params]
+  math = true
+  # 选择渲染引擎
+  mathUseKatex = true  # 推荐，渲染快
+  # 或
+  # mathUseMathJax = true

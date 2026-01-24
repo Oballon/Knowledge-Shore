@@ -24,3 +24,80 @@ integrity="sha256-77w69LDlq2rVoYSwSHOuQ876b0fZfK153GxAylw5kPQ="
 crossorigin=anonymous
 ```
 
+## `$$`无法编译问题
+
+### 问题原因
+使用 Goldmark 处理 Markdown，将 $$ 块当作普通段落文本，空行会被分割成多个段落，破坏 $$ 分隔符，Hugo 将其分割成多个段落
+构建后的 HTML 中，$$ 块被包在 <p> 标签内，导致markdown渲染器无法正确识别
+
+### 配置完成总结
+
+1. 修改了 hugo.toml
+
+启用了 Goldmark 的 passthrough 扩展
+
+配置 $$ 作为块级数学公式分隔符
+
+配置 `\(...\)` 作为内联数学公式分隔符
+
+2. 创建了 Render Hooks
+
+layouts/_default/_markup/render-passthrough-block.html - 处理 $$...$$ 块
+
+layouts/_default/_markup/render-passthrough-inline.html - 处理 `\(...\)` 内联公式
+
+3. 在 test.md 中添加了 KaTeX 激活
+
+添加了 {{< katex />}} shortcode 来激活 KaTeX 的 auto-render 功能
+
+工作原理：
+1. Passthrough 扩展：Hugo 的 passthrough 扩展会识别 $$...$$ 块，并将其传递给 render hook 处理
+2. Render Hook：render hook 输出完整的 $$...$$ 块，保留分隔符
+3. KaTeX Auto-render：页面加载时，KaTeX 的 auto-render 脚本会扫描页面，找到所有 $$...$$ 块并渲染为数学公式
+
+## 字段解释
+
+    {"left": "$$", "right": "$$", "display": true},
+
+display: true = 独立成行，display: false = 嵌入文本
+
+## Katex自动加载
+
+### 问题描述
+
+hugo-book需在文件头部添加`{{< katex />}}`，用来加载Katex，实现`$$`块的正常使用
+
+### 解决方法
+
+创建了自动加载 KaTeX 的注入文件
+
+文件位置： layouts/_partials/docs/inject/body.html
+该文件会在所有页面的 `</body>` 标签前自动加载 KaTeX，无需在每个页面手动添加 `{{< katex />}}`
+
+工作原理：
+1. Hugo 主题的注入机制：hugo-book 主题在 `baseof.html` 中提供了 `{{ partial "docs/inject/body" . }}` 注入点
+2. 自动加载：创建的`body.html` 会在每个页面自动加载 KaTeX 的 CSS 和 JS 文件
+3. 智能检测：使用 Page.Store 确保 KaTeX 只加载一次，避免重复加载
+
+
+## delimiters区别
+
+### hugo.toml 中的 delimiters
+
+作用：
+
+让 Hugo 识别这些分隔符，并将它们之间的内容原样保留（passthrough）
+
+防止 Markdown 处理这些内容，确保数学公式不被误解析
+
+这是预处理阶段，发生在 KaTeX 渲染之前
+
+### katex.json 中的 delimiters
+
+作用：
+
+定义 KaTeX 识别哪些分隔符
+
+指定每个分隔符是块级（display: true）还是行内（display: false）
+
+这是渲染阶段，KaTeX 会将这些分隔符之间的内容渲染为数学公式

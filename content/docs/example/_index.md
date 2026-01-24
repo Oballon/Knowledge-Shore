@@ -2,7 +2,7 @@
 weight: 1
 bookFlatSection: true
 title: "Example Site"
-bookhidden: true
+# bookhidden: true
 ---
 
 # Introduction
