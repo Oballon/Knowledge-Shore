@@ -1,0 +1,7 @@
+{{- $content := .content -}}
+{{- $page := .page -}}
+{{- if $page.Site.Params.BookPortableLinks -}}
+  {{- /* 处理HTML标签中的图片路径：pic-xxx/ -> ../pic-xxx/ */ -}}
+  {{- $content = $content | replaceRE `<img src="(pic-[^"]+)"` `<img src="../$1"` -}}
+{{- end -}}
+{{- return $content -}}

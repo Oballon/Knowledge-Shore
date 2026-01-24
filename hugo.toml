@@ -30,3 +30,5 @@ disablePathToLower = false
   mathUseKatex = true  # 推荐，渲染快
   # 或
   # mathUseMathJax = true
+  # 启用可移植链接，自动处理图片路径
+  BookPortableLinks = 'warning'

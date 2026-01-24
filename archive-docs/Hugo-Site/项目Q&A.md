@@ -38,13 +38,13 @@ crossorigin=anonymous
 
 配置 $$ 作为块级数学公式分隔符
 
-配置 `\(...\)` 作为内联数学公式分隔符
+配置 `$...$` 作为内联数学公式分隔符
 
 2. 创建了 Render Hooks
 
-layouts/_default/_markup/render-passthrough-block.html - 处理 $$...$$ 块
+layouts/_default/_markup/render-passthrough-block.html - 处理 `$$...$$` 块
 
-layouts/_default/_markup/render-passthrough-inline.html - 处理 `\(...\)` 内联公式
+layouts/_default/_markup/render-passthrough-inline.html - 处理 `$...$` 内联公式
 
 3. 在 test.md 中添加了 KaTeX 激活
 
@@ -101,3 +101,28 @@ hugo-book需在文件头部添加`{{< katex />}}`，用来加载Katex，实现`$
 指定每个分隔符是块级（display: true）还是行内（display: false）
 
 这是渲染阶段，KaTeX 会将这些分隔符之间的内容渲染为数学公式
+
+## 图片无法渲染问题
+
+### 问题原因
+
+本地预览要求pic-advance-math/ 路径（不带 ../），网页构建要求 ../pic-advance-math/ 路径
+
+### 解决方案
+
+#### 启用 BookPortableLinks 配置
+在 hugo.toml 中添加了 BookPortableLinks = 'warning'
+用于处理 Markdown 格式的图片引用
+#### 修改所有图片路径
+将所有图片路径从 ../pic-xxx/ 改为 pic-xxx/（去掉 ../ 前缀）
+涉及 17 个 markdown 文件
+
+#### 创建自定义处理机制
+创建了 layouts/_partials/docs/process-html-images.html - 处理 HTML 标签中的图片路径
+
+创建了 layouts/single.html - 覆盖主题默认模板，在渲染时处理 HTML 中的图片路径，自动将 pic-xxx/ 转换为 ../pic-xxx/（仅在构建时）
+
+#### 工作原理
+本地预览：Markdown 文件中的路径为 pic-advance-math/xxx.png，与图片在同一目录，预览器可正常显示
+
+网站构建：自定义处理机制将 HTML 中的 pic-xxx/ 自动转换为 ../pic-xxx/，构建后的网站可正常显示

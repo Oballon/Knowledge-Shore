@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <article class="markdown book-article">
+    {{- $processedContent := partial "docs/process-html-images" (dict "content" .Content "page" .) -}}
+    {{- $processedContent | safeHTML -}}
+  </article>
+{{ end }}
