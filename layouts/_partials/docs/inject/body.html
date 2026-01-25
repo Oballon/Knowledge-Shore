@@ -8,3 +8,12 @@
   {{- end -}}
   {{- .Page.Store.Set "katex" true -}}
 {{- end -}}
+
+{{- /* Copy code button script */ -}}
+{{- if not (.Page.Store.Get "copy-code") -}}
+  {{- $copyCodeJS := resources.Get "copy-code.js" | resources.Minify | resources.Fingerprint }}
+  {{- if $copyCodeJS }}
+  <script defer src="{{ $copyCodeJS.RelPermalink }}" {{ template "integrity" $copyCodeJS }}></script>
+  {{- end -}}
+  {{- .Page.Store.Set "copy-code" true -}}
+{{- end -}}

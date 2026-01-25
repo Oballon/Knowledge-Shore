@@ -1,0 +1,291 @@
+// GitHub主题代码块美化样式
+// 包含代码块容器、复制按钮等样式
+
+.markdown {
+  // ========== 代码块包装容器 ==========
+  .code-block-wrapper {
+    position: relative;
+    margin: $padding-16 0;
+  }
+
+  // ========== 代码块容器 ==========
+  .code-block-container {
+    position: relative;
+    
+    // 代码块hover时显示复制按钮
+    &:hover .copy-code-button {
+      opacity: 1;
+    }
+  }
+
+  // ========== 复制按钮样式 ==========
+  .copy-code-button {
+    position: absolute;
+    top: $padding-8;
+    right: $padding-8;
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    gap: $padding-4;
+    
+    padding: $padding-4 $padding-8;
+    background: var(--gray-100);
+    border: $padding-1 solid var(--gray-200);
+    border-radius: var(--border-radius);
+    
+    font-size: var(--font-size-smallest);
+    color: var(--body-font-color);
+    cursor: pointer;
+    
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    
+    // 始终显示（可选，如果希望按钮始终可见）
+    // opacity: 1;
+    
+    &:hover {
+      background: var(--gray-200);
+      border-color: var(--gray-300, #dee2e6);
+    }
+    
+    &:active {
+      background: var(--gray-300, #dee2e6);
+    }
+    
+    // 复制成功状态
+    &.copied {
+      background: var(--color-accent-success, #3bad3b);
+      border-color: var(--color-accent-success, #3bad3b);
+      color: white;
+      opacity: 1;
+      
+      .copy-icon {
+        display: none;
+      }
+    }
+    
+    // 图标样式
+    .copy-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+    
+    // 文本样式
+    .copy-text,
+    .copy-success {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+  }
+
+  // ========== 代码块样式优化 ==========
+  pre {
+    position: relative;
+    padding: $padding-16;
+    padding-top: $padding-16 + $padding-8 * 2; // 为复制按钮留出空间
+    background: #f7f7f7; // GitHub主题背景色
+    border: $padding-1 solid var(--gray-200);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin: 0;
+    
+    code {
+      padding: 0;
+      border: 0;
+      background: none;
+      font-size: 0.875em;
+      line-height: 1.6;
+    }
+    
+    // 美化滚动条
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--gray-100);
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray-500);
+      border-radius: 4px;
+      
+      &:hover {
+        background: var(--gray-400, #ced4da);
+      }
+    }
+    
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-500) var(--gray-100);
+  }
+
+  // ========== Chroma高亮代码块样式 ==========
+  .highlight,
+  .chroma {
+    position: relative;
+    margin: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    
+    // 确保复制按钮在代码块上方
+    pre {
+      position: relative;
+      padding-top: $padding-16 + $padding-8 * 2;
+    }
+    
+    // 表格布局（带行号）
+    .lntable {
+      width: 100%;
+      border-spacing: 0;
+      margin: 0;
+      
+      tbody {
+        border: $padding-1 solid var(--gray-200);
+      }
+      
+      td {
+        padding: 0;
+        border: 0;
+        
+        // 行号列
+        &:first-child {
+          background: var(--gray-100);
+          border-right: $padding-1 solid var(--gray-200);
+          padding: $padding-16 $padding-8;
+          text-align: right;
+          user-select: none;
+          vertical-align: top;
+          width: 1%;
+          
+          .lnt {
+            color: var(--gray-500);
+            font-size: 0.875em;
+          }
+        }
+        
+        // 代码列
+        &:last-child {
+          padding: $padding-16;
+          padding-top: $padding-16 + $padding-8 * 2;
+          vertical-align: top;
+          
+          pre {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+          }
+        }
+      }
+    }
+    
+    // 美化滚动条
+    pre {
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: var(--gray-100);
+        border-radius: 4px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: var(--gray-500);
+        border-radius: 4px;
+        
+        &:hover {
+          background: var(--gray-400, #ced4da);
+        }
+      }
+      
+      scrollbar-width: thin;
+      scrollbar-color: var(--gray-500) var(--gray-100);
+    }
+  }
+
+  // ========== 代码块文件名样式 ==========
+  .book-codeblock-filename {
+    background: var(--gray-100);
+    border: $padding-1 solid var(--gray-200);
+    border-bottom: 0;
+    font-size: var(--font-size-smaller);
+    margin-top: $padding-16;
+    padding: $padding-8 $padding-16;
+    border-start-start-radius: var(--border-radius);
+    border-start-end-radius: var(--border-radius);
+    
+    font-weight: 500;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    color: var(--body-font-color);
+    
+    a {
+      color: var(--body-font-color);
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--color-link);
+        text-decoration: underline;
+      }
+    }
+
+    + .code-block-wrapper .code-block-container {
+      .highlight,
+      pre {
+        border-start-start-radius: 0;
+        border-start-end-radius: 0;
+      }
+    }
+  }
+
+  // ========== 内联代码样式 ==========
+  code:not(pre code) {
+    padding: .125em .25em;
+    background: var(--gray-100);
+    border: $padding-1 solid var(--gray-200);
+    border-radius: var(--border-radius);
+    font-size: 0.875em;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    color: var(--body-font-color);
+  }
+}
+
+// ========== 响应式优化 ==========
+@media (max-width: 768px) {
+  .markdown {
+    .copy-code-button {
+      opacity: 1; // 移动端始终显示
+      padding: $padding-4 $padding-8;
+      font-size: 0.75em;
+      
+      .copy-icon {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    
+    pre {
+      padding: $padding-8;
+      padding-top: $padding-8 + $padding-8 * 2;
+      font-size: 0.875em;
+    }
+    
+    .highlight,
+    .chroma {
+      .lntable {
+        td:first-child {
+          padding: $padding-8 $padding-4;
+          font-size: 0.75em;
+        }
+        
+        td:last-child {
+          padding: $padding-8;
+          padding-top: $padding-8 + $padding-8 * 2;
+        }
+      }
+    }
+  }
+}

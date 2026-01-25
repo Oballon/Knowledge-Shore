@@ -1,0 +1,43 @@
+// 数学公式宽度控制
+// 处理 KaTeX 渲染的块级数学公式（$$...$$）
+// 使用 overflow: auto hidden 避免出现垂直滚动条
+.katex-display {
+    overflow: auto hidden; // 只显示横向滚动条，隐藏垂直滚动条
+    max-width: 100%;
+    margin: 1em 0;
+  }
+  
+  // 在 markdown 内容中处理块级公式
+  .markdown {
+    // 匹配包含块级公式的段落或div（使用 :has() 选择器）
+    > p:has(> .katex-display),
+    > div:has(> .katex-display) {
+      overflow: auto hidden; // 只显示横向滚动条
+      max-width: 100%;
+    }
+    
+    // 直接包含块级公式的情况
+    .katex-display {
+      overflow: auto hidden; // 只显示横向滚动条
+      // 添加一些内边距，使滚动时内容不会紧贴边缘
+      padding: 0.5em 0;
+    }
+    
+    // 处理可能包含公式的段落
+    > p {
+      // 如果段落中包含块级公式，允许横向滚动
+      &:has(.katex-display) {
+        overflow: auto hidden; // 只显示横向滚动条
+        max-width: 100%;
+      }
+    }
+  }
+  
+  // 内联公式确保不换行，但允许在必要时溢出（内联公式通常不会太宽）
+  .katex:not(.katex-display) {
+    white-space: nowrap;
+    // 内联公式如果过宽，可以稍微缩小或允许溢出
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: baseline;
+  }

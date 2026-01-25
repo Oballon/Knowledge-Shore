@@ -22,6 +22,9 @@ disablePathToLower = false
     [markup.goldmark.extensions.passthrough.delimiters]
       block = [['$$', '$$'], ['\\[', '\\]']]
       inline = [['$', '$'], ['\\(', '\\)']]
+  [markup.highlight]
+    style = 'github'
+    noClasses = false
 
 # config.toml
 [params]
