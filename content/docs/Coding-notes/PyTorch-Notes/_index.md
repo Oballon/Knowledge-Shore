@@ -1,5 +1,5 @@
 ---
-title: "PyTorch-Notes"
+title: "PyTorch笔记"
 bookCollapseSection: true
 ---
 

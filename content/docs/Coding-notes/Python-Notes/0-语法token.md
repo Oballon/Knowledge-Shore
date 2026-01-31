@@ -1,6 +1,6 @@
 ---
 title: "语法 Token"
-weight: 12
+weight: -1
 ---
 
 ## 关键字

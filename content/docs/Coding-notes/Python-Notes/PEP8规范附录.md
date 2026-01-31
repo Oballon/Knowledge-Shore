@@ -1,5 +1,5 @@
 ---
-title: "附录1-PEP 8 规范"
+title: "PEP 8 规范附录"
 weight: 13
 ---
 

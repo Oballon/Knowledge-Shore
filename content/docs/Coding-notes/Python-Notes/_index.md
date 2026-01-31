@@ -1,5 +1,5 @@
 ---
-title: "Python-Notes"
+title: "Python笔记"
 bookCollapseSection: true
 ---
 
