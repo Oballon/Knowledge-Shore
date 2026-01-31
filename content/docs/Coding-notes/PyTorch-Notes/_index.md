@@ -1,6 +1,6 @@
 ---
-title: "PyTorch 学习指南"
-bookFlatSection: true
+title: "PyTorch-Notes"
+bookCollapseSection: true
 ---
 
 # PyTorch 完整学习指南
@@ -19,7 +19,6 @@ bookFlatSection: true
 8. [常用层和函数](7-常用层和函数.md)
 9. [优化器与损失函数](8-优化器与损失函数.md)
 10. [实战案例](9-实战案例.md)
-11. [torch.nn 模块参考手册](torch.nn参考手册.md)
 
 ## 学习路径建议
 

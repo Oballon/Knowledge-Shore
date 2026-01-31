@@ -1,6 +1,6 @@
 ---
-title: "Python 学习指南"
-bookFlatSection: true
+title: "Python-Notes"
+bookCollapseSection: true
 ---
 
 # Python 完整学习指南
