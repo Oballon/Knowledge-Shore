@@ -4,19 +4,6 @@ weight: 7
 bookhidden: true
 ---
 
-# Transformer架构
-
-## 目录
-
-1. [Transformer概述](#transformer概述)
-2. [注意力机制](#注意力机制)
-3. [Transformer结构](#transformer结构)
-4. [BERT和GPT](#bert和gpt)
-5. [Vision Transformer](#vision-transformer)
-6. [代码实现](#代码实现)
-
----
-
 ## Transformer概述
 
 ### 背景
@@ -81,27 +68,7 @@ $$\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h
 
 ### 整体架构
 
-```
-输入序列
-  ↓
-位置编码
-  ↓
-编码器（N层）
-  ├─ 多头自注意力
-  ├─ 残差连接 + 层归一化
-  ├─ 前馈网络
-  └─ 残差连接 + 层归一化
-  ↓
-解码器（N层）
-  ├─ 掩码多头自注意力
-  ├─ 残差连接 + 层归一化
-  ├─ 编码器-解码器注意力
-  ├─ 残差连接 + 层归一化
-  ├─ 前馈网络
-  └─ 残差连接 + 层归一化
-  ↓
-输出层
-```
+<img src="pic-deep-learning/Weixin Image_20260301170038_5132_3.png">
 
 ### 编码器（Encoder）
 

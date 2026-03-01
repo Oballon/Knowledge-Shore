@@ -1,7 +1,7 @@
 ---
 title: "深度学习"
 bookCollapseSection: true
-weight: 1
+weight: 5
 ---
 
 # 深度学习完整学习指南
@@ -90,4 +90,3 @@ weight: 1
 4. **阅读论文**：关注最新研究成果
 5. **参与社区**：加入讨论，分享经验
 
-祝学习顺利！🚀

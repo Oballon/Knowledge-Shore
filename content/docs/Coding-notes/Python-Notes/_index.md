@@ -1,6 +1,7 @@
 ---
 title: "Python笔记"
 bookCollapseSection: true
+weight: 3
 ---
 
 # Python 完整学习指南
@@ -22,6 +23,11 @@ bookCollapseSection: true
 11. [高级特性](10-高级特性.md)
 12. [常用内置函数](11-常用内置函数.md)
 
+### 附录
+
+- [附录1-PEP 8 规范](附录1-PEP8规范.md)
+- [附录2-生成可执行文件](附录2-生成可执行文件.md)
+
 ## 学习路径建议
 
 ### 初学者路径
@@ -41,6 +47,7 @@ bookCollapseSection: true
 2. 掌握常用内置函数和标准库
 3. 理解 Python 的内存机制和性能优化
 4. 学习常用第三方库（numpy、pandas等）
+5. 需要分发程序时，参阅 [附录2-生成可执行文件](附录2-生成可执行文件.md)
 
 ## 前置知识
 
