@@ -1,7 +1,7 @@
 ## 电枢回路等效电路
 
 <div style="text-align: center;">
-<img src="pic/Weixin Image_20260405113317_236_5.jpg" width=45%>
+<img src="pic/Weixin Image_20260405113317_236_5.jpg" width="45%">
 </div>
 
 $$双极性控制：\\
@@ -23,8 +23,8 @@ I_0与I_{t_1}应变大，达到伏秒平衡\\
 - 二极管起“泄洪”作用，防止电感续流作用击穿开关管
 
 <div style="text-align: center;">
-<img src="pic/Weixin Image_20260405113318_237_5.jpg" width=80%>
-<img src="pic/Weixin Image_20260405154416_238_5.jpg" width=75%>
+<img src="pic/Weixin Image_20260405113318_237_5.jpg" width="80%">
+<img src="pic/Weixin Image_20260405154416_238_5.jpg" width="75%">
 </div>
 
 - 开关频率极高，E近似为恒定值，即转速与旋转方向不变
@@ -50,8 +50,8 @@ $$
 ## 单极性控制
 
 <div style="text-align: center;">
-<img src="pic/Weixin Image_20260405164541_240_5.jpg" width=70%>
-<img src="pic/Weixin Image_20260405154417_239_5.jpg" width=70%>
+<img src="pic/Weixin Image_20260405164541_240_5.jpg" width="70%">
+<img src="pic/Weixin Image_20260405154417_239_5.jpg" width="70%">
 </div>
 
 $$正向导通过渡电流：i_a=\frac{U_D-E}{R_a}-(\frac{U_D-E}{R_a}-I_0)e^{-\frac{R_a}{L_a}t}\\
