@@ -1,8 +1,8 @@
 ## 电枢回路等效电路
 
-<center>
+<div style="text-align: center;">
 <img src="pic/Weixin Image_20260405113317_236_5.jpg" width=45%>
-</center>
+</div>
 
 $$双极性控制：\\
 正向导通过渡电流：i_a=\frac{U_D-E}{R_a}-(\frac{U_D-E}{R_a}-I_0)e^{-\frac{R_a}{L_a}t}\\
@@ -22,10 +22,10 @@ I_0与I_{t_1}应变大，达到伏秒平衡\\
 - IGBT属于单向电压阻断器件，$U_{CE}<0$时，无法导通
 - 二极管起“泄洪”作用，防止电感续流作用击穿开关管
 
-<center>
+<div style="text-align: center;">
 <img src="pic/Weixin Image_20260405113318_237_5.jpg" width=80%>
 <img src="pic/Weixin Image_20260405154416_238_5.jpg" width=75%>
-</center>
+</div>
 
 - 开关频率极高，E近似为恒定值，即转速与旋转方向不变
 - 开关主要影响电感电流，$T_1,T_4$时电流增加，$T_2,T_3$时电流减小
@@ -49,10 +49,10 @@ $$
 
 ## 单极性控制
 
-<center>
+<div style="text-align: center;">
 <img src="pic/Weixin Image_20260405164541_240_5.jpg" width=70%>
 <img src="pic/Weixin Image_20260405154417_239_5.jpg" width=70%>
-</center>
+</div>
 
 $$正向导通过渡电流：i_a=\frac{U_D-E}{R_a}-(\frac{U_D-E}{R_a}-I_0)e^{-\frac{R_a}{L_a}t}\\
 关断过渡电流：i_a=-\frac{E}{R_a}+(\frac{E}{R_a}+I_{t_1})e^{-\frac{R_a}{L_a}(t-t_1)}
