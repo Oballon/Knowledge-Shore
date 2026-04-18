@@ -1,5 +1,5 @@
 ---
 title: "自动控制原理"
 bookCollapseSection: true
-weight: 3
+weight: 1
 ---

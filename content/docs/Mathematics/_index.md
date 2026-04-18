@@ -1,4 +1,4 @@
 ---
-title: "Theory"
+title: "Mathematics"
 bookFlatSection: true
 ---

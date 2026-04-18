@@ -1,4 +1,4 @@
 ---
-title: "CS Funda"
+title: "Computer Science"
 bookFlatSection: true
 ---
