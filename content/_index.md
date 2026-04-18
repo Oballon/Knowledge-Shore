@@ -11,7 +11,7 @@ layout: landing
 [{{< badge style="info" title="Hugo" value="0.146" >}}](https://github.com/gohugoio/hugo/releases/tag/v0.146.7)
 [{{< badge style="default" title="License" value="MIT" >}}](https://github.com/alex-shpak/hugo-book/blob/main/LICENSE)
 
-{{<button href="/posts">}}进入探索{{</button>}}
+{{<button href="/docs">}}进入探索{{</button>}}
 
 </div>
 
@@ -41,26 +41,4 @@ layout: landing
   {{< /card >}}
 {{% /columns %}}
 
-<!-- {{% columns %}}
-- {{< card >}}
-  ### Shortcodes
-  Pretty good shortcodes are included to enhance markup files:
-  [Columns]({{< relref "/docs/shortcodes/columns" >}}),
-  [Cards]({{< relref "/docs/shortcodes/experimental/cards" >}}),
-  [Tabs]({{< relref "/docs/shortcodes/tabs" >}}),
-  [Images]({{< relref "/docs/shortcodes/experimental/images" >}}),
-  [Asciinema]({{< relref "/docs/shortcodes/experimental/asciinema" >}}),
-  [KaTex]({{< relref "/docs/shortcodes/katex" >}}),
-  [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}}) and others.
-  {{< /card >}}
 
-- {{< card >}}
-  ### Even more
-  Do people actually read these? I thought it was just a visual filler. But there is full-text search and multi-language support.
-  {{< /card >}}
-
-- {{< card >}}
-  ### Made to be extendable
-  There are multiple points to inject own styles and templates to make your documentation your own.
-  {{< /card >}}
-{{% /columns %}} -->

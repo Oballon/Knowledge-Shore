@@ -1,7 +1,7 @@
 ---
 title: "深度学习"
 bookCollapseSection: true
-weight: 5
+weight: 2
 ---
 
 # 深度学习完整学习指南
